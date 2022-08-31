@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:life_stream/Utils/styles.dart';
 
-class MyInputField extends StatelessWidget {
-  final String title;
+class SignInputField extends StatelessWidget {
+  final String? title;
   final String hint;
   final TextEditingController? controller;
   final Widget? widget;
 
-  const MyInputField(
+  const SignInputField(
       {Key? key,
-      required this.title,
+      this.title = "",
       required this.hint,
       this.controller,
       this.widget})
@@ -20,9 +20,11 @@ class MyInputField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: CustomStyles.subtitleStyle),
+        title!.isNotEmpty
+            ? Text("$title", style: CustomStyles.headingStyle)
+            : Container(),
         Container(
-          padding: const EdgeInsets.only(top: 10.0, left: 2, right: 2),
+          padding: const EdgeInsets.only(top: 5.0),
           child: Column(
             children: <Widget>[
               Row(

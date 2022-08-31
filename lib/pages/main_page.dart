@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:life_stream/pages/donors_list.dart';
 import 'package:life_stream/pages/find_blood_dononrs.dart';
 import 'package:life_stream/pages/history.dart';
 import 'package:life_stream/pages/profile_page.dart';
@@ -36,7 +34,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: pages[currentindex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 13,
+        selectedFontSize: 14,
         unselectedFontSize: 12,
         type: BottomNavigationBarType.shifting,
         onTap: onTap,
@@ -44,9 +42,9 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey.withOpacity(1),
         showSelectedLabels: true,
-        showUnselectedLabels: true,
-        elevation: 0,
-        items: [
+        showUnselectedLabels: false,
+        elevation: 5,
+        items: const [
           BottomNavigationBarItem(
               label: "Find Donors", icon: Icon(Icons.home_outlined)),
           BottomNavigationBarItem(

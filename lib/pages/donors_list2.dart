@@ -23,16 +23,16 @@ class _DonorsListState extends State<DonorsList> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.arrow_back_outlined,
                       size: 32,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Column(
@@ -43,7 +43,7 @@ class _DonorsListState extends State<DonorsList> {
                                 fontSize: 22,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black)),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                       ],
@@ -52,7 +52,7 @@ class _DonorsListState extends State<DonorsList> {
                 ),
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 50,
                     ),
                     Expanded(
@@ -61,13 +61,13 @@ class _DonorsListState extends State<DonorsList> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 ListView.builder(
                     itemCount: 30,
                     scrollDirection: Axis.vertical,
-                    physics: ScrollPhysics(),
+                    physics: const ScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (_, index) {
                       return AnimationConfiguration.staggeredList(
@@ -78,12 +78,12 @@ class _DonorsListState extends State<DonorsList> {
                               color: Colors.white,
                               elevation: 2,
                               child: Container(
-                                padding: EdgeInsets.all(10.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Column(
                                   children: [
                                     Row(
                                       children: [
-                                        bloodGroup(
+                                        const bloodGroup(
                                           text: 'A+',
                                         ),
                                         Expanded(
@@ -97,7 +97,7 @@ class _DonorsListState extends State<DonorsList> {
                                     ),
                                     Row(
                                       children: [
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 60,
                                         ),
                                         Column(
@@ -106,7 +106,7 @@ class _DonorsListState extends State<DonorsList> {
                                           children: [
                                             Text("Last Donation",
                                                 style: GoogleFonts.heebo()),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 5,
                                             ),
                                             Text("4 Month ago",
@@ -115,7 +115,7 @@ class _DonorsListState extends State<DonorsList> {
                                                         FontWeight.w700)),
                                           ],
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 30,
                                         ),
                                         Column(
@@ -124,7 +124,7 @@ class _DonorsListState extends State<DonorsList> {
                                           children: [
                                             Text("Location",
                                                 style: GoogleFonts.heebo()),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 5,
                                             ),
                                             Text("Lahore",
@@ -137,7 +137,7 @@ class _DonorsListState extends State<DonorsList> {
                                     ),
                                     Row(
                                       children: [
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 60,
                                         ),
                                         ElevatedButton(
@@ -145,7 +145,7 @@ class _DonorsListState extends State<DonorsList> {
                                             child: Container(
                                               width: 170,
                                               child: Row(
-                                                children: [
+                                                children: const [
                                                   Icon(Icons.person),
                                                   SizedBox(
                                                     width: 5,

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomStyles {
   static final smallTextStyle = GoogleFonts.heebo(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.grey,
       fontSize: 12,
     ),
@@ -20,14 +20,14 @@ class CustomStyles {
   static TextStyle normalTextStyle() {
     return GoogleFonts.poppins(
         fontSize: 15,
-        color: Color(0xff3A4276).withOpacity(.4),
+        color: const Color(0xff3A4276).withOpacity(.4),
         fontWeight: FontWeight.w500);
   }
 
   static TextStyle headTextStyle() {
     return GoogleFonts.poppins(
       fontSize: 15,
-      color: Color(0xff3A4276),
+      color: const Color(0xff3A4276),
       fontWeight: FontWeight.w800,
     );
   }
@@ -41,7 +41,7 @@ class CustomStyles {
   );
 
   static final mediumTextStyle = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Color(0xff303030),
       fontSize: 18,
       fontWeight: FontWeight.w700,
@@ -49,11 +49,11 @@ class CustomStyles {
   );
   static final headingStyle = GoogleFonts.poppins(
       textStyle: GoogleFonts.lato(
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
               fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black)));
 
   static final cardBoldTextStyle = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.white,
       fontSize: 14,
       fontWeight: FontWeight.w700,
@@ -61,7 +61,7 @@ class CustomStyles {
   );
 
   static final cardBoldDarkTextStyle = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.black,
       fontSize: 14,
       fontWeight: FontWeight.w700,
@@ -69,7 +69,7 @@ class CustomStyles {
   );
 
   static final cardBoldDarkDrawerTextStyle = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.black,
       fontSize: 16,
       fontWeight: FontWeight.w700,
@@ -77,7 +77,7 @@ class CustomStyles {
   );
 
   static final cardBoldDarkTextStyle2 = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.black,
       fontSize: 12,
       fontWeight: FontWeight.w700,
@@ -85,7 +85,7 @@ class CustomStyles {
   );
 
   static final cardBoldDarkTextStyleGreen = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.green,
       fontSize: 12,
       fontWeight: FontWeight.w700,
@@ -93,7 +93,7 @@ class CustomStyles {
   );
 
   static final cardNormalTextStyle = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.white,
       fontSize: 12,
       fontWeight: FontWeight.w400,
@@ -101,7 +101,7 @@ class CustomStyles {
   );
 
   static final cardNormalDarkTextStyle = GoogleFonts.poppins(
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.black,
       fontSize: 12,
       fontWeight: FontWeight.w400,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'otp_mobile_number.dart';
 
@@ -54,22 +55,24 @@ class _InputMobileNumberState extends State<InputMobileNumber> {
                         tag: "Hero",
                         child: Image.asset(
                           "assets/images/typing.png",
-                          fit: BoxFit.cover, height: 200, width: 200,
+                          fit: BoxFit.cover,
+                          height: 200,
+                          width: 200,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "OTP Verification",
                         style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: Colors.black87),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text(
                             "We will send you and",
                           ),
@@ -81,13 +84,13 @@ class _InputMobileNumberState extends State<InputMobileNumber> {
                           ),
                         ],
                       ),
-                      Text(
+                      const Text(
                         "on this mobile number",
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Text(
+                      const Text(
                         "Enter Mobile Number",
                       ),
                       Form(
@@ -95,7 +98,9 @@ class _InputMobileNumberState extends State<InputMobileNumber> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 40.0, right: 40),
                           child: TextFormField(
-                            decoration: InputDecoration(),
+                            keyboardType: TextInputType.phone,
+                            maxLength: 11,
+                            decoration: const InputDecoration(),
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return "Phone Number cannot be empty";
@@ -112,33 +117,33 @@ class _InputMobileNumberState extends State<InputMobileNumber> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                       Material(
                         color: Colors.red,
-                        borderRadius: BorderRadius.circular(
-                            chnageButton ? 50 : 8),
+                        borderRadius:
+                            BorderRadius.circular(chnageButton ? 50 : 8),
                         child: InkWell(
                           onTap: () => movetohome(context),
                           child: Hero(
-                            tag: Key("100"),
+                            tag: const Key("100"),
                             child: AnimatedContainer(
-                                duration: Duration(seconds: 1),
+                                duration: const Duration(seconds: 1),
                                 width: chnageButton ? 50 : 250,
                                 height: 50,
                                 alignment: Alignment.center,
                                 child: chnageButton
-                                    ? Icon(
-                                  Icons.done,
-                                  color: Colors.white,
-                                )
-                                    : Text(
-                                  "Get OTP",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                )),
+                                    ? const Icon(
+                                        Icons.done,
+                                        color: Colors.white,
+                                      )
+                                    : const Text(
+                                        "Get OTP",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      )),
                           ),
                         ),
                       )

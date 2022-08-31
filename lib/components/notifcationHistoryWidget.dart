@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../Utils/styles.dart';
 
 class NotifcationHistoryWidget extends StatelessWidget {
+  const NotifcationHistoryWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -24,18 +26,16 @@ class NotifcationHistoryWidget extends StatelessWidget {
                 style: CustomStyles.normalTextStyle(),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 5, bottom: 10),
+              padding: const EdgeInsets.only(
+                  left: 20, right: 20, top: 5, bottom: 10),
               child: Text(
                 "subtitle",
                 style: CustomStyles.normalTextStyle(),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 5, bottom: 10),
+            const Padding(
+              padding: EdgeInsets.only(left: 20, top: 5, bottom: 10),
               child: Text(
                 'Today: 5:15 pm',
                 style: TextStyle(
@@ -47,12 +47,12 @@ class NotifcationHistoryWidget extends StatelessWidget {
             ),
           ],
         ),
-        margin: EdgeInsets.only(left: 25, right: 25),
+        margin: const EdgeInsets.only(left: 25, right: 25),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color(0x33303030),
               offset: Offset(0, 5),

@@ -3,7 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../Utils/styles.dart';
-import '../components/header_widget.dart';
+import '../components/header_widget_bg.dart';
 import '../components/notifcationHistoryWidget.dart';
 
 class NotificationHistoryPage extends StatelessWidget {
@@ -14,7 +14,7 @@ class NotificationHistoryPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
-          Container(
+          SizedBox(
             width: mQ.width,
             height: mQ.height,
           ),
@@ -23,20 +23,21 @@ class NotificationHistoryPage extends StatelessWidget {
             key: null,
           ),
           Positioned(
-              top: mQ.height * 0.14,
-              left: 5,
-              right: 5,
-              child: Container(
-                height: mQ.height * 0.8,
+              top: mQ.height * 0.12,
+              left: 0,
+              right: 0,
+              bottom: 10,
+              child: SizedBox(
+                height: mQ.height * 0.9,
                 child: ListView.builder(
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return AnimationConfiguration.staggeredList(
                       position: index,
                       child: SlideAnimation(
                         child: FadeInAnimation(
                             child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(4.0),
                           child: NotifcationHistoryWidget(),
                         )),
                       ),
@@ -57,17 +58,19 @@ class NotificationHistoryPage extends StatelessWidget {
                   },
                   color: Colors.white,
                   textColor: Colors.green,
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back,
                     size: 15,
                   ),
-                  padding: EdgeInsets.all(6),
-                  shape: CircleBorder(),
+                  padding: const EdgeInsets.all(6),
+                  shape: const CircleBorder(),
                 ),
-                Text(
-                  "Notifications",
-                  style: CustomStyles.cardBoldTextStyle,
-                ),
+                Text("Notifications",
+                    style: GoogleFonts.heebo(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    )),
               ],
             ),
           ),
@@ -89,7 +92,7 @@ Widget _ListofHistory(BuildContext context) {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                     offset: Offset(0, 4),
                     blurRadius: 20,

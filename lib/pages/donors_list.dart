@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../Utils/styles.dart';
 import '../components/blood_group.dart';
-import '../components/header_widget.dart';
+import '../components/header_widget_bg.dart';
 
 class DonorsList extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class DonorsList extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
-          Container(
+          SizedBox(
             width: mQ.width,
             height: mQ.height,
           ),
@@ -26,17 +26,17 @@ class DonorsList extends StatelessWidget {
               top: mQ.height * 0.14,
               left: 5,
               right: 5,
-              child: Container(
+              child: SizedBox(
                 height: mQ.height * 0.8,
                 child: ListView.builder(
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return AnimationConfiguration.staggeredList(
                       position: index,
-                      child: SlideAnimation(
+                      child: const SlideAnimation(
                         child: FadeInAnimation(
                             child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: DonorsList_Widget(),
                         )),
                       ),
@@ -57,12 +57,12 @@ class DonorsList extends StatelessWidget {
                   },
                   color: Colors.white,
                   textColor: Colors.green,
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back,
                     size: 15,
                   ),
-                  padding: EdgeInsets.all(6),
-                  shape: CircleBorder(),
+                  padding: const EdgeInsets.all(6),
+                  shape: const CircleBorder(),
                 ),
                 Text(
                   "Donors List",
@@ -88,12 +88,12 @@ class DonorsList_Widget extends StatelessWidget {
       color: Colors.white,
       elevation: 2,
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Row(
               children: [
-                bloodGroup(
+                const bloodGroup(
                   text: 'A+',
                 ),
                 Expanded(
@@ -107,28 +107,28 @@ class DonorsList_Widget extends StatelessWidget {
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 60,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Last Donation", style: GoogleFonts.heebo()),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text("4 Month ago",
                         style: GoogleFonts.heebo(fontWeight: FontWeight.w700)),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 30,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Location", style: GoogleFonts.heebo()),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text("Lahore",
@@ -139,15 +139,15 @@ class DonorsList_Widget extends StatelessWidget {
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 60,
                 ),
                 ElevatedButton(
                     onPressed: () {},
-                    child: Container(
+                    child: SizedBox(
                       width: 170,
                       child: Row(
-                        children: [
+                        children: const [
                           Icon(Icons.person),
                           SizedBox(
                             width: 5,
@@ -177,7 +177,7 @@ Widget _ListofHistory(BuildContext context) {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                     offset: Offset(0, 4),
                     blurRadius: 20,

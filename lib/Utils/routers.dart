@@ -2,6 +2,7 @@ class MyRoutes {
   static const String loginRoute = "/login";
   static const String homeRoute = "/home";
   static const String findBloodRoute = "/findBlood";
+  static const String stepperdemoRoute = "/stepper";
   static const String splashRoute = "/splash";
   static const String mainRoute = "/mainPage";
   static const String onBoardingRoute = "/onBoarding";
@@ -19,4 +20,5 @@ class MyRoutes {
   static const String historyDetailPage = "/HistoryDetailPage";
   static const String carsCategoryPage = "/CarsCategoryPage";
   static const String notificationHistoryPage = "/NotificationHistoryPage";
+  static const String helpPage = "/HelpPage";
 }
